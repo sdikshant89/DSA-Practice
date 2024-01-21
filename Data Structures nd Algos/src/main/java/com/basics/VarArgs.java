@@ -4,6 +4,9 @@ import java.util.Arrays;
     This class indicates the use of variable arguments for a function
     When we're not sure how many parameters to pass in a method, we can use this
     Variable args should be coming at the end of the parameter lists
+
+    These arguments can be read like a list of arguments (which the function definition does)
+    The function definition instead of reading them as separate parameters, reads the arguments as array of elements
 */
 public class VarArgs {
     static String abc = "abc";
