@@ -50,6 +50,8 @@ public class FloorAndCeil {
                 start = mid+1;
             }
         }
+        // If at the end we find the number itself, we're gonna return the same in both
+        // In this case the start = end
         System.out.println("Ceil is" + arr[start]);
         System.out.println("Floor is" + arr[end]);
     }
