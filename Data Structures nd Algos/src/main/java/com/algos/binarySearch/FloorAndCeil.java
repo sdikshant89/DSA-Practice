@@ -41,7 +41,8 @@ public class FloorAndCeil {
 
             if (Objects.equals(arr[mid], numb)){
                 System.out.println("Ceil and Floor is" + numb.toString());
-                break;
+                return;
+                //break;
             }
             else if(arr[mid]>numb){
                 end = mid - 1;

@@ -1,7 +1,6 @@
 package main.java.com.basics;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class TrialndError {
     public static List<Integer> addToArrayForm(int[] num, int k) {
@@ -19,6 +18,22 @@ public class TrialndError {
             con = con/10;
         }
         return lst;
+    }
+    public Integer[] removeDuplicates(int[] nums) {
+        Integer[] arr = new Integer[nums.length];
+        Integer constt = nums[0];
+        arr[0] = constt;
+        Integer arr_ind = 1;
+        for(int i=1;i<nums.length;i++){
+            if(Objects.equals(constt, nums[i])){
+                continue;
+            }else{
+                arr[arr_ind] = nums[i];
+                arr_ind++;
+                constt = nums[i];
+            }
+        }
+        return arr;
     }
 
     public static void main(String[] args) {

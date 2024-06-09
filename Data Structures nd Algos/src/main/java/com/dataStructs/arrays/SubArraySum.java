@@ -63,6 +63,7 @@ public class SubArraySum {
     // Instead of adding the initial -ve to the current_sum(a new variable defined)
     // Start adding from where you find the +ve number and all the -ve numbers which come after
     // They are supposed to be negated from the current_sum but keep another variable (max_sum) as the max value you get
+    // KADANE'S IS JUST FOR MAX SUM AND NOT MIN SUM
 
     public static Integer kadanes(Integer[] arr){
         Integer max_sum = Integer.MIN_VALUE;
@@ -71,11 +72,13 @@ public class SubArraySum {
         int maxElement = Integer.MIN_VALUE;
 
         for(int i=0;i<arr.length;i++){
+            // Kadane's when all the elements in the array are -ve
             if (arr[i] > 0) {
                 allNegative = false;
             }
             maxElement = Math.max(maxElement, arr[i]);
 
+            // Kadane's normal algo
             curr_sum = curr_sum + arr[i];
             if(curr_sum<0){
                 curr_sum = 0;
