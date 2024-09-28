@@ -3,6 +3,7 @@ package main.java.com.algos.sorting;
 import main.java.com.utils.Utils;
 
 import java.util.Arrays;
+import java.util.Collections;
 
 public class BasicSorting {
 
@@ -54,10 +55,33 @@ public class BasicSorting {
         return arr;
     }
 
+    public static Integer[] countSort(Integer[] arr){
+
+        int min = Collections.min(Arrays.asList(arr));
+        int max = Collections.max(Arrays.asList(arr));
+        int range = max - min;
+        int[] cntArr = new int[range + 1];
+        Integer[] srtArr = new Integer[arr.length];
+        for (Integer integer : arr) {
+            cntArr[integer - min]++;
+        }
+        int newCounter = 0;
+        for(int i=0;i<cntArr.length;i++){
+            int count = cntArr[i];
+            while(count!=0){
+                srtArr[newCounter] = i+min;
+                newCounter++;
+                count--;
+            }
+        }
+        return srtArr;
+    }
+
     public static void main(String[] args) {
         Integer[] arr = Utils.inputIntArray();
         System.out.println("Bubble sort:" + Arrays.toString(bubbleSort(arr)));
         System.out.println("Selection sort:" + Arrays.toString(selectionSort(arr)));
         System.out.println("Insertion sort:" + Arrays.toString(insertionSort(arr)));
+        System.out.println("Count sort:" + Arrays.toString(countSort(arr)));
     }
 }
