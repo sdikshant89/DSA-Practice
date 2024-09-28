@@ -11,7 +11,7 @@ public class Utils {
     }
     public static Integer[] inputIntArray(){
         System.out.println("Input the number of elements in array");
-        Integer length_arr = input.nextInt();
+        Integer length_arr = (Integer) input.nextInt();
         Integer[] arr = new Integer[length_arr];
         System.out.println("Input numbers of array");
         for(int i=0;i<length_arr;i++){
