@@ -1,5 +1,5 @@
 package main.java.com.dataStructs.arrays;
-import main.java.com.utils.Utils;
+
 public class SubArraySum {
 
     // The time complexity of this (bruteforce) is O(n^3)
@@ -92,7 +92,7 @@ public class SubArraySum {
     }
 
     public static void main(String[] args) {
-        // Integer[] arr = Utils.inputIntArray();
+        // Integer[] arr = InputUtils.inputIntArray();
         // Integer[] arr = {1,-2,6,-1,3};
         Integer[] arr = {-2, -3, 4, -1, -2, 1, 5, -3};
         Integer[] new_arr = find_SubArray_Sum(arr);

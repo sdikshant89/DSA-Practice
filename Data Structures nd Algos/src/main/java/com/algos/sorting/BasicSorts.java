@@ -1,11 +1,11 @@
 package main.java.com.algos.sorting;
 
-import main.java.com.utils.Utils;
+import main.java.com.utils.InputUtils;
 
 import java.util.Arrays;
 import java.util.Collections;
 
-public class BasicSorting {
+public class BasicSorts {
 
     public static Integer[] bubbleSort(Integer[] arr){
         Integer len = arr.length;
@@ -78,7 +78,7 @@ public class BasicSorting {
     }
 
     public static void main(String[] args) {
-        Integer[] arr = Utils.inputIntArray();
+        Integer[] arr = InputUtils.inputIntArray();
         System.out.println("Bubble sort:" + Arrays.toString(bubbleSort(arr)));
         System.out.println("Selection sort:" + Arrays.toString(selectionSort(arr)));
         System.out.println("Insertion sort:" + Arrays.toString(insertionSort(arr)));

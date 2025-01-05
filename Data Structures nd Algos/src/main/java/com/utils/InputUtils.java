@@ -2,9 +2,8 @@ package main.java.com.utils;
 
 import java.util.Scanner;
 
-public class Utils {
+public class InputUtils {
     public static Scanner input;
-
     // Used instead of constructor when we use static class variables
     static{
         input = new Scanner(System.in);
@@ -18,5 +17,9 @@ public class Utils {
             arr[i] = input.nextInt();
         }
         return arr;
+    }
+    public static int inputNumber(){
+        System.out.println("Input the number:");
+        return input.nextInt();
     }
 }
