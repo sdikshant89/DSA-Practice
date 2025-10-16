@@ -91,10 +91,22 @@ public class SubArraySum {
         return max_sum;
     }
 
+    public static Integer updatedKadane(Integer[] arr){
+        int curr_sum = arr[0];
+        int max_sum = arr[0];
+
+        for (int element : arr) {
+            curr_sum = Math.max(element, curr_sum + element);
+            max_sum = Math.max(curr_sum, max_sum);
+        }
+        return max_sum;
+    }
+
     public static void main(String[] args) {
         // Integer[] arr = InputUtils.inputIntArray();
         // Integer[] arr = {1,-2,6,-1,3};
         Integer[] arr = {-2, -3, 4, -1, -2, 1, 5, -3};
+        System.out.println("Updated kadanes Method:\nMax Sum:" + updatedKadane(arr).toString());
         Integer[] new_arr = find_SubArray_Sum(arr);
         System.out.println("Max Sum:" + new_arr[1].toString() + "\nMin sum:" + new_arr[0].toString());
         new_arr = find_SubArray_Sum_prefix(arr);

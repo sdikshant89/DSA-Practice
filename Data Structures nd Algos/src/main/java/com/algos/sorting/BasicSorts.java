@@ -30,13 +30,17 @@ public class BasicSorts {
             return arr;
         }
         for(int i=0;i<len-1;i++){
+            int min_pos = i;
             for(int j=i+1;j<len;j++){
-                if(arr[i]>arr[j]){
-                    Integer temp = arr[j];
-                    arr[j] = arr[i];
-                    arr[i] = temp;
+                if(arr[min_pos] > arr[j]){
+                    //Updating min position unless we get the smallest number
+                    min_pos = j;
                 }
             }
+            //Swap i with wherever is the smallest element
+            Integer temp = arr[min_pos];
+            arr[min_pos] = arr[i];
+            arr[i] = temp;
         }
         return arr;
     }
