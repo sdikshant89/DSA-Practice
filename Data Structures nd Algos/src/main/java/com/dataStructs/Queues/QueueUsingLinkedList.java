@@ -1,3 +1,5 @@
+package main.java.com.dataStructs.Queues;
+
 public class QueueUsingLinkedList {
 
     // We'll keep track of linked list's head and tail, move tail to add and remove head to
