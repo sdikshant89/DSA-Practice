@@ -44,6 +44,15 @@ public class Recursion {
         //vertical case
         return tilingProblem(n-1) + tilingProblem(n-2);
     }
+
+    // Try to formulate how to solve this
+    static int friendsPairingProblem(int n){
+        if(n == 1 || n == 2){
+            return n;
+        }
+        return friendsPairingProblem(n-1) + ((n-1) * friendsPairingProblem(n-2));
+    }
+
     public static void main(String[] args) {
         int[] arr = {1,2,3,12,5,6,7,12,8,9};
         //System.out.println(fib(arr,1));
